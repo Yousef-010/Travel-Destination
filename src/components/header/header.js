@@ -1,11 +1,16 @@
 import './header.css';
+import NavBar from '../NavBar/NavBar';
+
+import { Link } from 'react-router-dom';
+
 function Header (props){
     return (
         <>
-        <h1>header section </h1>
-        
+        <NavBar/>
+        <h1>Welcome to Travel Distenation </h1>
+       
         <hr></hr>
-        <br></br>
+
 
         </>
     )}

@@ -7,7 +7,7 @@ function Home (){
 
         {
               data.map((Element )=>{
-            return <Tours TourName = {Element.name} Tourimage = {Element.image} alter={Element.id} />
+            return <Tours TourName = {Element.name} Tourimage = {Element.image} alter={Element.id} info={Element.info} price={Element.price} />
               })
 
          }      

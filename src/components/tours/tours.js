@@ -1,26 +1,34 @@
 import './tours.css'
-function Tours (props){
+import data from '../../data/db.json';
+import Tour from './tour/tour';
+
+
+function Tours (){
+
     return (
         <>
-        <ul className="cards">
-        <li>
-          <a   className="card">
-            <img src={props.Tourimage}  className="card__image" alt="" />
-            <div className="card__overlay">
-              <div className="card__header">
-                <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
-                <img className="card__thumb" src={props.Tourimage} alt={props.alter} />
-                <div className="card__header-text">
-                  <h3 className="card__title">{props.TourName}</h3>
-                  <span className="card__status">Price :{props.price}$</span>
-                </div>          
-              </div>
-              <p className="card__description">{props.info}</p>
-            </div>
-          </a>
-        </li>    
-      </ul>
-      </>
+         <ul className="cards">
+         <Tour data={data} />
+         </ul>
+        </>
     )}
 
+    
+
     export default Tours
+
+
+  //   <ul >
+  //  
+  // </ul>
+
+
+  // <div>
+  //           <ul >
+  //             {
+  //               data.map(ele=>{
+  //                 return <Tour data={ele} key = {ele.id}/>
+  //               })
+  //             }
+  //           </ul>
+  //        </div>
